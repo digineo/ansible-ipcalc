@@ -3,6 +3,7 @@ IP Calc for Ansible
 
 [![Build Status](https://travis-ci.org/digineo/ansible-ipcalc.svg?branch=master)](https://travis-ci.org/digineo/ansible-ipcalc)
 
+
 ## Requirements
 
 You need a recent version of ipcalc.
@@ -11,9 +12,11 @@ On Debian/Ubuntu you can install it with:
     sudo apt-get install python-pip
     sudo pip install ipcalc
 
+
 ## Installation
 
-Save this file in $ansible/filter_plugins/
+Copy the file `ipcalc_filter.py` to `$ansible/filter_plugins/`
+
 
 ## Usage
 

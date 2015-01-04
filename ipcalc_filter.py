@@ -22,18 +22,19 @@ class FilterModule (object):
         net    = ipcalc.Network(value)
         result = {
             'version'   : net.version(),
-            'network'   : str(net.network()),
             'netmask'   : str(net.netmask()),
             'subnet'    : net.subnet(),
             'size'      : net.size(),
         }
 
         if net.version() == 6:
+            result['network']  = net.network().to_compressed()
             result['host_min'] = net.host_first().to_compressed()
-            result['host_max'] = net.host_last().to_compressed()    
+            result['host_max'] = net.host_last().to_compressed()
         if net.version() == 4:
-            result['host_min'] = str(net.host_first())
-            result['host_max'] = str(net.host_last())   
+            result['network']   = str(net.network())
+            result['host_min']  = str(net.host_first())
+            result['host_max']  = str(net.host_last())
             result['broadcast'] = str(net.broadcast())
 
         return result

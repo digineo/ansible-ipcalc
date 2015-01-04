@@ -1,6 +1,8 @@
 IP Calc for Ansible
 ===========
 
+[![Build Status](https://travis-ci.org/digineo/ansible-ipcalc.svg?branch=master)](https://travis-ci.org/digineo/ansible-ipcalc)
+
 ## Requirements
 
 You need a recent version of ipcalc.
